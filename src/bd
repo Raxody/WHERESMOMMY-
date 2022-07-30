@@ -1,0 +1,13 @@
+CREATE TABLE huerfano(
+    id BIGINT primary key,
+    nombre VARCHAR(50),
+    edad int
+);
+
+CREATE TABLE solicitudAdopcion(
+    identificacionHuerfano BIGINT,
+    telefonoContacto BIGINT,
+    nombreSolicitante VARCHAR,
+    aprobar INTEGER,
+    primary key (identificacionHuerfano,telefonoContacto)
+     );
