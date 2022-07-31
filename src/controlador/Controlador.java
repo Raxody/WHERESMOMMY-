@@ -200,9 +200,11 @@ public class Controlador implements ActionListener {
         if (this.huerfanosVisual.getBtnBuscarAdopcion() == e.getSource()) {
             if (this.huerfanosVisual.getCmbHuerfanos().getSelectedIndex() != 0) {
                 Optional<Adopcion> adopcion = Optional.of(new Adopcion());
+
                 try {
                     adopcion = this.servicioAdopcion.buscarAdopcion(Long.parseLong(this.huerfanosVisual.getCmbHuerfanos().getSelectedItem().toString()),
                             Long.parseLong(this.huerfanosVisual.getTxtTelefonoAdopcion().getText()));
+                    System.out.println(adopcion.toString());
                 } catch (NumberFormatException ew) {
                     JOptionPane.showMessageDialog(null, "Ingresa un valor valido en el telefono");
                 }
@@ -210,11 +212,13 @@ public class Controlador implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Huerfano no encontrado");
                 } else {
                     this.huerfanosVisual.getTxtNombreAdopcion().setText(adopcion.get().getNombreSolicitante());
+
                 }
             }else{
                 JOptionPane.showMessageDialog(null, "Debes seleccionar un huerfano");
+                limpiarCampos();
             }
-            limpiarCampos();
+
         }
 
         if (this.huerfanosVisual.getBtnEliminarAdopcion() == e.getSource()) {
