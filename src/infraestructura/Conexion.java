@@ -12,9 +12,7 @@ public final class Conexion {
     public static void iniciarConexion(){
         try{
             conenection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/"+databaseName, user,password);
-            System.out.println("Conectado con extio");
         }catch (Exception e){
-            System.out.println("Conectado sin extio");
         }
     }
 
