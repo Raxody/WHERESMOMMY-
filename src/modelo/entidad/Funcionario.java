@@ -1,18 +1,20 @@
 package modelo.entidad;
 
-public class Huerfano {
+public class Funcionario {
 
     private Long identificacion;
     private String nombre;
+    private String cargo;
     private int edad;
 
-    public Huerfano(Long identificacion, String nombre, int edad) {
+    public Funcionario(Long identificacion, String nombre, String cargo, int edad) {
         this.identificacion = identificacion;
         this.nombre = nombre;
+        this.cargo = cargo;
         this.edad = edad;
     }
 
-    public Huerfano() {
+    public Funcionario() {
 
     }
 
@@ -32,6 +34,13 @@ public class Huerfano {
         this.nombre = nombre;
     }
 
+    public String getCargo() {
+        return cargo;
+    }
+
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
 
     public int getEdad() {
         return edad;
@@ -43,9 +52,10 @@ public class Huerfano {
 
     @Override
     public String toString() {
-        return "Huerfano{" +
+        return "Funcionarios{" +
                 "identificacion=" + identificacion +
                 ", nombre='" + nombre + '\'' +
+                ", cargo='" + cargo + '\'' +
                 ", edad=" + edad +
                 '}';
     }

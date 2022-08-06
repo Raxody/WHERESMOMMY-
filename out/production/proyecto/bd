@@ -11,3 +11,15 @@ CREATE TABLE solicitudAdopcion(
     aprobar INTEGER,
     primary key (identificacionHuerfano,telefonoContacto)
      );
+
+CREATE TABLE recursos(
+    nombreRecurso VARCHAR(50) primary key,
+    cantidad INT
+);
+
+CREATE TABLE funcionario(
+    id BIGINT primary key,
+    nombre VARCHAR(50),
+    edad int,
+    cargo VARCHAR(50)
+);

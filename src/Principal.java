@@ -2,10 +2,10 @@ import controlador.Controlador;
 import infraestructura.Conexion;
 import jdk.swing.interop.SwingInterOpUtils;
 import modelo.entidad.Adopcion;
+import modelo.entidad.Funcionario;
 import modelo.entidad.Huerfano;
-import modelo.servicio.IHuerfano;
-import modelo.servicio.ServicioAdopcion;
-import modelo.servicio.ServicioHuerfano;
+import modelo.entidad.Recursos;
+import modelo.servicio.*;
 
 import javax.swing.*;
 
@@ -18,32 +18,30 @@ public class Principal {
         Controlador controlador = new Controlador();
 
         controlador.iniciar();
+/*
+        IRecurso recurso = new ServicioRecurso();
 
-       /* IHuerfano huerfano = new ServicioHuerfano();
+        System.out.println(recurso.crearRecursos(new Recursos("lapices",200)));;
 
+        System.out.println(recurso.actualizarRecursos(new Recursos("sillassss",20)));;
 
-        huerfano.listarHuerfanos().stream().forEach(huerfano1 -> System.out.println(huerfano1.toString()));
-        System.out.println("buysvcar");
-        System.out.println(huerfano.buscarHuerfano(12345546L).toString());
-        System.out.println("buysvcar----------------------------");
-        System.out.println(huerfano.actualizarHuerfano(new Huerfano(1234567888L,"juanitito",22)).toString());
-
-        System.out.println("buysvcar----------------------------");
-        System.out.println(huerfano.eliminarHuerfano(1234567111L));
-        ServicioAdopcion servicioAdopcion = new ServicioAdopcion();
-        System.out.println(servicioAdopcion.generarSolicitudAdopcion(new Adopcion(123456L,31525469678L,"FULANITO",2)));
-        System.out.println("------------------------------");
-        System.out.println(servicioAdopcion.actualizarAdopcion(new Adopcion(123456L,31525469678L,"FULANITO Y TAN",2)));
-        System.out.println("------------------------------");
-        servicioAdopcion.listarAdopcion().forEach(adopcion -> System.out.println(adopcion.toString()));
-        System.out.println("------------------------------");
-        //System.out.println(servicioAdopcion.eliminarAdopcion(123456L,31525469678L));
-        System.out.println(servicioAdopcion.aceptarSolicitudAdopcion(new Adopcion(1234567L,31525469678L,"FULANITO Y TAN",2)));
+        recurso.listarRecursos().forEach(adopcion -> System.out.println(adopcion.toString()));
 
 
-        System.out.println("-----------dd");
-        servicioAdopcion.listarAdopcion().forEach(adopcion -> System.out.println(adopcion.toString()));*/
+        System.out.println(recurso.buscarRecursos("lapices").toString());
 
+        System.out.println(recurso.eliminarRecursos("lapices"));
+
+        IFuncionarios funcionarios = new ServicioFuncionario();
+
+        System.out.println(funcionarios.crearFuncionarios(new Funcionario(1234567892L,"Andres","Profesor",25)));;
+
+
+        System.out.println(funcionarios.actualizarFuncionarios(new Funcionario(1234567892L,"Andresito","Profesorcito",26)));;
+
+        System.out.println(funcionarios.eliminarFuncionarios(1234567892L));
+
+        funcionarios.listarFuncionarios().forEach(adopcion -> System.out.println(adopcion.toString()));*/
 
 
     }
